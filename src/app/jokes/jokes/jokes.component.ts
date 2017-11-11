@@ -1,16 +1,22 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { JokesService } from './jokes.service';
 
 @Component({
   selector: 'app-jokes',
   templateUrl: './jokes.component.html',
   styleUrls: ['./jokes.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+   providers: [JokesService]
 })
 export class JokesComponent implements OnInit {
 
-  constructor() { }
+  joke: any;
+  constructor(private jokes: JokesService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  getRandomJoke() {
+    this.jokes.getRandom()
+      .subscribe((joke) => this.joke = joke);
   }
-
 }

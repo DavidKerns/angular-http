@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { JokesService } from '../jokes.service';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-jokes',

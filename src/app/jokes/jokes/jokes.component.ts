@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { JokesService } from './jokes.service';
+import { JokesService } from '../jokes.service';
 
 @Component({
   selector: 'app-jokes',
